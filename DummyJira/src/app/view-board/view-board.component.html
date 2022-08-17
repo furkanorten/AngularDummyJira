@@ -1,0 +1,20 @@
+<div class="container d-flex justify-content-center mt-5 mb-5">
+  <button (click)="openNewCardDialog()" mat-raised-button color="accent">Add New Card</button>
+</div>
+
+<div class="container w-50">
+  <mat-card class="d-flex justify-content-between align-items-center mb-2 border" *ngFor="let card of boardService.boards[boardIndex].cards; let i=index">
+    <mat-card-title class="mb-0">{{card.title}}</mat-card-title>
+    <mat-card-content class="mb-0">
+      <div class="container d-flex flex-column">
+        <mat-checkbox *ngFor="let checkbox of card.checklist; let j=index" [(ngModel)]="card.status[j]">
+          {{checkbox}}
+        </mat-checkbox>
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="pt-0 pb-2">
+      <button (click)="updateCard(i, card)" mat-raised-button color="primary">Update</button>
+      <button (click)="deleteCard(i)" mat-raised-button color="accent">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
