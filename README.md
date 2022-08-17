@@ -1,6 +1,12 @@
 # DummyJira
 
+### Web app with Angular that you can add boards, cards and tasks as in Jira
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+
+## Installing Packages
+
+Run `npm install` for installing node modules.
 
 ## Development server
 
